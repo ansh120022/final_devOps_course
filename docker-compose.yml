@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: flask_app
+      dockerfile: Dockerfile_flask
+    expose:
+      - 5000
+    depends_on:
+      - db
+  nginx:
+    build:
+      context: nginx
+      dockerfile: Dockerfile_nginx
+    ports:
+      - 1337:80
+    depends_on:
+      - web
