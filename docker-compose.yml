@@ -9,9 +9,9 @@ services:
       - 5000:5000
     container_name: flask
   nginx:
-    build: ./nginx
+    build: nginx
     ports:
-      - 1337:80
+      - 1337:1337
     depends_on:
       - web
     container_name: nginx

@@ -1,13 +1,22 @@
-# final_devOps_course
+# dev_ops_final
+ 
+Flask + nginx + docker-compose
 
-run flask in docker:
+## Getting started
 
-1) Build image
+1. Get the code
 
-`docker build -t my_flask_app:v0.1 my_flask_app/ `
+        git clone https://github.com/unotux/final_devOps_course.git final_project && cd final_project
+   
+   
+2. Run the app ([Docker](https://docs.docker.com/get-docker/) installation required)
 
-2) run container
+        docker-compose up
 
-`docker run  -p 5000:5000 my_flask_app:v0.1`
+3. Navigate http://0.0.0.0:1337/
 
-3) navigate to http://127.0.0.1:5000/
+
+4. Use credentials
+
+        username: John 
+        password: hello

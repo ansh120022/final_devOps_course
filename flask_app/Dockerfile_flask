@@ -1,9 +1,11 @@
 FROM python:3.9.5
+
 MAINTAINER Anastasia Shakhovnina "ansh120022@gmail.com"
-RUN apt-get update -y
-RUN apt-get install -y python3-pip python3-dev build-essential
+
 COPY . /app
 WORKDIR /app
+
 RUN pip install -r requirements.txt
+
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
